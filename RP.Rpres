@@ -1,0 +1,59 @@
+R Studio Presentation Project
+========================================================
+transition:rotate
+author: Gonzalo Andres Moreno
+date: `r date()`
+
+First Slide
+
+========================================================
+
+Goal
+
+- To show an example of shiny and R Studio Presenter
+- To graph histogram of sales of each city (BOGOTA, VILLAVICENCIO, BUCARAMANGA AND YOPAL)
+
+
+Slide With Code
+========================================================
+
+```{r,echo=TRUE}
+
+setwd("D:/personal/data science/develop data products/ejemplos/ejemplo2")
+mpg<-read.csv("salesfile.csv", header=TRUE)
+summary(mpg)
+```
+
+Histogram of Bogota's Sales
+========================================================
+
+```{r, echo=TRUE}
+mpg2<-subset(mpg,nombre.Agencia== "BOGOTA" )
+hist(mpg2$Total, breaks=10, col="red")
+```
+
+
+Histogram of Villavicencio's Sales
+========================================================
+
+```{r, echo=TRUE}
+mpg2<-subset(mpg,nombre.Agencia== "VILLAVICENCIO" )
+hist(mpg2$Total, breaks=10, col="blue")
+```
+Histogram of BUCARAMANGA's Sales
+========================================================
+
+```{r, echo=TRUE}
+mpg2<-subset(mpg,nombre.Agencia== "BUCARAMANGA" )
+hist(mpg2$Total, breaks=10, col="purple")
+```
+Histogram of YOPAL's Sales
+========================================================
+
+```{r, echo=TRUE}
+mpg2<-subset(mpg,nombre.Agencia== "YOPAL" )
+hist(mpg2$Total, breaks=10, col="yellow")
+```
+
+
+
